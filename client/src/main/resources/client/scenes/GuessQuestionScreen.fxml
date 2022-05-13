@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../css/gamescreen.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.GuessQuestionCtrl">
+    <children>
+        <ImageView fx:id="background" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../../pictures/gamescreen.png" />
+            </image>
+        </ImageView>
+        <BorderPane fx:id="borderPane" prefHeight="720.0" prefWidth="1280.0">
+            <center>
+                <SplitPane fx:id="centerPane" dividerPositions="0.2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="506.0" prefWidth="699.0" BorderPane.alignment="CENTER">
+                    <items>
+                        <AnchorPane fx:id="centerUpperPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="56.0" prefWidth="699.0">
+                            <children>
+                                <Label fx:id="questionLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="699.0" text="How much energy does it take (in Wh)?" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="centerLowerLeftPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="696.0">
+                            <children>
+                                <ImageView fx:id="answerImage" fitHeight="291.0" fitWidth="699.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" />
+                                <Label fx:id="answerLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="294.0" lineSpacing="2.0" prefHeight="49.0" prefWidth="666.0" text="Answer" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true" AnchorPane.topAnchor="278.0">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets bottom="7.0" left="7.0" right="3.0" top="7.0" />
+                                    </padding>
+                                </Label>
+                                <AnchorPane layoutX="5.0" layoutY="376.0" prefHeight="47.0" prefWidth="681.0">
+                                    <children>
+                                        <TextField fx:id="answerField" layoutX="232.0" layoutY="1.0" prefHeight="39.0" prefWidth="207.0" promptText="Enter your guess">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                        <Label layoutX="125.0" layoutY="9.0" text="Your guess:">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="answerButton1" layoutX="459.0" layoutY="2.0" mnemonicParsing="false" onAction="#answerClicked" text="OK">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                        <Label fx:id="digitCountLabel" layoutX="16.0" layoutY="344.0" prefHeight="27.0" prefWidth="682.0" text="Number of digits:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="firstDigitLabel" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="344.0" prefHeight="27.0" prefWidth="660.0" text="First digit: x">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                            </children>
+                        </AnchorPane>
+                    </items>
+                    <BorderPane.margin>
+                        <Insets right="-20.0" />
+                    </BorderPane.margin>
+                </SplitPane>
+            </center>
+            <top>
+                <AnchorPane fx:id="upPane" prefHeight="132.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="quitButton" alignment="CENTER" mnemonicParsing="false" onAction="#quit" prefHeight="80.0" prefWidth="80.0" translateX="10.0" translateY="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <graphic>
+                                <ImageView fx:id="quitButtonImage" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../pictures/nuclear.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Label fx:id="roundCounterLabel" alignment="CENTER_RIGHT" layoutX="1117.0" layoutY="14.0" prefHeight="39.0" prefWidth="133.0" text="Q 00/20" textFill="#3e3e3e" AnchorPane.rightAnchor="29.40000000000009" AnchorPane.topAnchor="14.0">
+                            <font>
+                                <Font size="34.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </top>
+            <left>
+                <AnchorPane fx:id="leftPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fx:id="jokerImage" fitHeight="480.0" fitWidth="280.0" layoutX="21.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                        </ImageView>
+                        <Button fx:id="joker1" layoutX="23.0" layoutY="175.0" mnemonicParsing="false" onAction="#showNumberOfDigits" prefHeight="26.0" prefWidth="107.0" rotate="-21.0" text="log₁₀" textOverrun="CLIP">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Button>
+                        <Button fx:id="joker2" layoutX="113.0" layoutY="50.0" mnemonicParsing="false" onAction="#doublePoints" prefHeight="31.0" prefWidth="111.0" rotate="-90.0" text="x2">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Button>
+                        <Button fx:id="joker3" layoutX="199.0" layoutY="180.0" mnemonicParsing="false" onAction="#showFirstDigit" prefHeight="26.0" prefWidth="107.0" rotate="27.0" text="X...">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Button>
+                    </children>
+                </AnchorPane>
+            </left>
+            <right>
+                <AnchorPane fx:id="rightPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="pointsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="105.0" text="0" textAlignment="CENTER" textFill="#ffdd00" wrapText="true">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                        <ListView fx:id="reactionTable" layoutX="25.0" layoutY="226.0" prefHeight="280.0" prefWidth="200.0" />
+                        <Label fx:id="pointsLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="43.0" text="⚡" textFill="#ffdd00">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="pointsLabel11" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="43.0" text="⚡" textFill="#ffdd00">
+                            <font>
+                                <Font name="System Bold" size="36.0" />
+                            </font>
+                        </Label>
+                        <StackPane fx:id="countdown" layoutX="25.0" prefHeight="150.0" prefWidth="200.0" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin></AnchorPane>
+            </right>
+            <bottom>
+                <AnchorPane fx:id="downPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ButtonBar fx:id="reactionBar" buttonMinWidth="40.0" layoutX="-3.0" layoutY="20.0" prefHeight="40.0" prefWidth="0.0">
+                            <buttons>
+                                <Button fx:id="emoji1" minHeight="40.0" mnemonicParsing="false" onAction="#angry" text="e1">
+                                    <graphic>
+                                        <ImageView fx:id="emojiImage1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="-4.0">
+                                            <image>
+                                                <Image url="@../../pictures/angry.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="emoji2" minHeight="40.0" mnemonicParsing="false" onAction="#laughing" text="e2">
+                                    <graphic>
+                                        <ImageView fx:id="emojiImage2" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="-4.0">
+                                            <image>
+                                                <Image url="@../../pictures/laughing.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="emoji3" minHeight="40.0" mnemonicParsing="false" onAction="#devil" text="e3">
+                                    <graphic>
+                                        <ImageView fx:id="emojiImage3" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="-4.0">
+                                            <image>
+                                                <Image url="@../../pictures/devil.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="emoji4" minHeight="40.0" mnemonicParsing="false" onAction="#crying" text="e4">
+                                    <graphic>
+                                        <ImageView fx:id="emojiImage4" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="-4.0">
+                                            <image>
+                                                <Image url="@../../pictures/crying.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="emoji5" minHeight="40.0" mnemonicParsing="false" onAction="#sunglasses" text="e5">
+                                    <graphic>
+                                        <ImageView fx:id="emojiImage5" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="-4.0">
+                                            <image>
+                                                <Image url="@../../pictures/sunglasses.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="emoji6" minHeight="40.0" mnemonicParsing="false" onAction="#heart" text="e6">
+                                    <graphic>
+                                        <ImageView fx:id="emojiImage6" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" translateX="-4.0">
+                                            <image>
+                                                <Image url="@../../pictures/heart.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </buttons>
+                        </ButtonBar>
+                    </children>
+                </AnchorPane>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

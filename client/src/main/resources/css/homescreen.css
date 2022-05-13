@@ -1,0 +1,13 @@
+.root {
+    -fx-background-image: url("../pictures/homescreen.png");
+}
+
+#quitButton {
+    -fx-cursor: hand;
+}
+
+#quitButton:hover {
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 20, 0.0, 0, 1);
+}
+
+

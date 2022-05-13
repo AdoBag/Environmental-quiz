@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.CorrectAnswerCtrl">
+    <children>
+        <ImageView fx:id="background" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+        </ImageView>
+        <Label fx:id="message" alignment="CENTER" layoutX="184.0" layoutY="239.0" prefHeight="104.0" prefWidth="912.0" text="Yes! That was the correct answer.">
+            <font>
+                <Font name="Agency FB Bold" size="60.0" />
+            </font>
+        </Label>
+        <Label fx:id="points" alignment="CENTER" layoutX="297.0" layoutY="360.0" prefHeight="104.0" prefWidth="686.0" text="+02938 points">
+            <font>
+                <Font name="Agency FB Bold" size="50.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

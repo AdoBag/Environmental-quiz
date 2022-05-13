@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../css/homescreen.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.HomeScreenCtrl">
+   <children>
+      <ImageView fx:id="background" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../pictures/homescreen.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="q" layoutX="449.0" layoutY="150.0" prefHeight="87.0" prefWidth="23.0" rotate="32.0" scaleX="1.75" scaleY="1.75" scaleZ="1.75" text="Q" textFill="WHITE">
+         <font>
+            <Font name="Mistral" size="74.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="u" layoutX="572.0" layoutY="145.0" rotate="25.0" scaleX="1.75" scaleY="1.75" scaleZ="1.75" text="U" textFill="WHITE">
+         <font>
+            <Font name="Mistral" size="82.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="i" layoutX="742.0" layoutY="118.0" rotate="24.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" text="I" textFill="WHITE">
+         <font>
+            <Font name="Mistral" size="94.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="z1" layoutX="951.0" layoutY="40.0" text="Z" textFill="WHITE">
+         <font>
+            <Font name="Mistral" size="96.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="z2" layoutX="917.0" layoutY="117.0" text="Z" textFill="WHITE">
+         <font>
+            <Font name="Mistral" size="96.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="z3" layoutX="885.0" layoutY="196.0" text="Z" textFill="WHITE">
+         <font>
+            <Font name="Mistral" size="96.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="singlepLabel" disable="true" layoutX="32.0" layoutY="267.0" opacity="0.75" prefHeight="236.0" prefWidth="604.0" rotate="-70.2" scaleX="0.75" text="Singleplayer" textFill="#ffcc00">
+         <font>
+            <Font name="Agency FB" size="96.0" />
+         </font>
+         <rotationAxis>
+            <Point3D x="0.6" z="1.0" />
+         </rotationAxis>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <Label fx:id="multipLabel" disable="true" layoutX="251.0" layoutY="325.0" opacity="0.75" prefHeight="234.0" prefWidth="401.0" rotate="-70.3" text="Multiplayer" textFill="#ffcc00">
+         <font>
+            <Font name="Agency FB" size="93.0" />
+         </font>
+         <rotationAxis>
+            <Point3D x="0.5" z="1.0" />
+         </rotationAxis>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <Label fx:id="lbLabel" disable="true" layoutX="397.0" layoutY="361.0" opacity="0.75" prefHeight="234.0" prefWidth="423.0" rotate="-70.5" scaleX="0.9" text="Leaderboard" textFill="#ffcc00">
+         <font>
+            <Font name="Agency FB" size="94.0" />
+         </font>
+         <rotationAxis>
+            <Point3D x="0.4" z="1.0" />
+         </rotationAxis>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <Label fx:id="adminLabel" disable="true" layoutX="679.0" layoutY="384.0" opacity="0.75" prefHeight="234.0" prefWidth="263.0" rotate="-70.2" text="Admin" textFill="#ffcc00">
+         <font>
+            <Font name="Agency FB" size="120.0" />
+         </font>
+         <rotationAxis>
+            <Point3D x="0.1" z="1.0" />
+         </rotationAxis>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Button fx:id="multipButton" blendMode="OVERLAY" layoutX="201.0" layoutY="369.0" mnemonicParsing="false" onAction="#multiplayer" opacity="0.2" prefHeight="205.0" prefWidth="465.0" rotate="-81.3" scaleX="0.9">
+         <font>
+            <Font size="96.0" />
+         </font>
+         <rotationAxis>
+            <Point3D x="0.77" z="1.0" />
+         </rotationAxis>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <BoxBlur height="76.5" width="255.0" />
+         </effect>
+      </Button>
+      <Button fx:id="lbButton" blendMode="OVERLAY" layoutX="281.0" layoutY="400.0" mnemonicParsing="false" onAction="#leaderboard" opacity="0.2" prefHeight="241.0" prefWidth="654.0" rotate="-85.2" scaleX="0.75" scaleY="1.1">
+         <font>
+            <Font size="96.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <BoxBlur height="38.36" width="255.0" />
+         </effect>
+         <rotationAxis>
+            <Point3D x="0.77" z="1.0" />
+         </rotationAxis>
+      </Button>
+      <Button fx:id="adminButton" blendMode="OVERLAY" layoutX="540.0" layoutY="403.0" mnemonicParsing="false" onAction="#admin" opacity="0.2" prefHeight="222.0" prefWidth="576.0" rotate="-80.5" scaleX="0.75" scaleY="1.1">
+         <font>
+            <Font size="96.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <BoxBlur height="45.51" width="255.0" />
+         </effect>
+         <rotationAxis>
+            <Point3D x="0.8" z="1.5" />
+         </rotationAxis>
+      </Button>
+      <Button fx:id="singlepButton" blendMode="OVERLAY" contentDisplay="TOP" layoutX="83.0" layoutY="331.0" mnemonicParsing="false" onAction="#singleplayer" opacity="0.1" prefHeight="238.0" prefWidth="431.0" rotate="122.5" scaleX="0.8" scaleY="0.8">
+         <rotationAxis>
+            <Point3D x="1.5" y="8.2" z="14.0" />
+         </rotationAxis>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="84.0" />
+         </font>
+         <effect>
+            <BoxBlur height="31.21" width="97.71" />
+         </effect>
+      </Button>
+      <Button fx:id="quitButton" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#quit">
+         <graphic>
+            <ImageView fx:id="nukeSymbol" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../pictures/nuclear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+.root {
+    -fx-background-image: url("../pictures/clouds.png");
+}
+
+#startButton {
+    -fx-border-color: #00436b;
+    -fx-cursor: hand;
+    -fx-blend-mode: lighten;
+    -fx-text-fill: #06435e;
+    -fx-background-radius: 10;
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../css/admin.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AdminScreenCtrl">
+    <children>
+        <ImageView fx:id="background" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../pictures/homescreen.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="quitButton" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#quit">
+        <graphic>
+            <ImageView fx:id="nukeSymbol" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../pictures/nuclear.png" />
+                </image>
+            </ImageView>
+        </graphic>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor>
+    </Button>
+
+      <TableView fx:id="table" layoutX="12.0" layoutY="154.0" prefHeight="556.0" prefWidth="1256.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="101.3333740234375" sortable="false" text="ID" />
+          <TableColumn fx:id="imagePath" prefWidth="183.33331298828125" sortable="false" text="Image path" />
+            <TableColumn fx:id="title" prefWidth="355.3333740234375" sortable="false" text="Title" />
+            <TableColumn fx:id="consumption" minWidth="0.0" prefWidth="80.6666259765625" sortable="false" text="Consumption" />
+            <TableColumn fx:id="source" minWidth="0.0" prefWidth="513.3333129882812" sortable="false" text="Source" />
+        </columns>
+      </TableView>
+      <Button fx:id="addActivity" layoutX="165.0" layoutY="74.0" mnemonicParsing="false" onAction="#addActivity" prefWidth="125.0" text="Add activity" />
+      <Button fx:id="deleteActivity" layoutX="323.0" layoutY="75.0" mnemonicParsing="false" onAction="#deleteActivity" prefWidth="125.0" text="Delete activity" />
+      <Button fx:id="editActivity" layoutX="957.0" layoutY="73.0" mnemonicParsing="false" onAction="#editActivity" prefWidth="125.0" text="Edit activity" />
+      <Button fx:id="chooseFile" layoutX="165.0" layoutY="23.0" mnemonicParsing="false" onAction="#selectFile" prefWidth="125.0" text="Choose file" />
+      <Button fx:id="importFile" layoutX="1111.0" layoutY="23.0" mnemonicParsing="false" onAction="#importAllActivities" prefWidth="125.0" text="Import all activities" />
+      <TextField fx:id="filePath" editable="false" layoutX="323.0" layoutY="24.0" prefHeight="25.0" prefWidth="759.0" promptText="File name" />
+      <Button fx:id="commitEdit" disable="true" layoutX="1111.0" layoutY="74.0" mnemonicParsing="false" onAction="#commitEdit" prefWidth="125.0" text="Commit edit" />
+      <AnchorPane layoutX="12.0" layoutY="118.0" prefHeight="27.0" prefWidth="1260.0">
+         <children>
+            <TextField fx:id="textSource" layoutX="779.0" prefHeight="25.0" prefWidth="475.0" promptText="Enter source" />
+            <TextField fx:id="textPath" layoutX="117.0" prefHeight="25.0" prefWidth="179.0" promptText="Enter absolute image path" />
+            <TextField fx:id="textId" prefHeight="25.0" prefWidth="111.0" promptText="Enter ID" />
+            <TextField fx:id="textTitle" layoutX="301.0" prefHeight="25.0" prefWidth="363.0" promptText="Enter title" />
+            <TextField fx:id="textConsumption" layoutX="669.0" prefHeight="25.0" prefWidth="106.0" promptText="Enter consumption" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

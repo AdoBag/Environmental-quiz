@@ -1,0 +1,73 @@
+.root {
+  -fx-background-color: #ffe59e;
+}
+
+#bottom {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 25;
+}
+
+#quitButton {
+    -fx-cursor: hand;
+}
+
+#quitButton:hover {
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 20, 0.0, 0, 1);
+}
+
+#bottomGrid {
+    -fx-background-color: #ffdb4c;
+    -fx-border-color: #af8900;
+    -fx-border-width: 10;
+}
+
+#p1 {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+
+#p2 {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+
+#p3 {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+
+#p4 {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+
+#p5 {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+
+#p6 {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+
+#p7 {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+
+#p8 {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+
+.pScore {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+
+.number {
+    -fx-font-family: "Bookman Old Style";
+    -fx-font-size: 30;
+}
+

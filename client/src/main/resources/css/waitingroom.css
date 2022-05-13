@@ -1,0 +1,20 @@
+.root {
+    -fx-background-image: url("../pictures/clouds2.png");
+}
+
+#waiting {
+    -fx-text-fill: #0065a8;
+}
+
+#quitButton:hover {
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 20, 0.0, 0, 1);
+}
+
+#startButton {
+    -fx-border-color: #08659f;
+    -fx-text-fill: #08659f;
+    -fx-background-color: white;
+    -fx-cursor: hand;
+    -fx-blend-mode: lighten;
+    -fx-background-radius: 10;
+}

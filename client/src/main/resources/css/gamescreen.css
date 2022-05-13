@@ -1,0 +1,39 @@
+
+#quitButton {
+    -fx-cursor: hand;
+}
+
+#quitButton:hover {
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 20, 0.0, 0, 1);
+}
+
+#joker1 {
+    -fx-cursor: hand;
+    -fx-font-size: 18;
+}
+
+#joker2 {
+    -fx-cursor: hand;
+    -fx-font-size: 18;
+}
+
+#joker3 {
+    -fx-cursor: hand;
+    -fx-font-size: 18;
+}
+
+#joker1:hover {
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 15, 0.0, 0, 1);
+}
+
+#joker2:hover {
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 15, 0.0, 0, 1);
+}
+
+#joker3:hover {
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 15, 0.0, 0, 1);
+}
+
+#reactionBar {
+    -fx-cursor: hand;
+}
