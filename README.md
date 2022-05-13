@@ -1,4 +1,8 @@
-Note: my team and I used GitLab for this project, but since it was created in a private university-owned repository, I had to move the files to this GitHub repository. If you want to play it, you have to add the activities by unzipping them and then selecting the file path for the activities.json file in the admin screen of the client.
+# Notes: 
+- This project was made for the TU Delft course "CSE 1105 OOP Project".
+- My team and I used GitLab for this project, but since it was created in a private university-owned repository, I had to move the files to this GitHub repository. If you want to play it, you have to add the activities by unzipping them and then selecting the file path for the activities.json file in the admin screen of the client. 
+- I've removed some of the pictures for the activities (as a consequence, you won't be able to see them during the quiz) so that I could upload the archive on GitHub.
+
 
 # QUIZZZ
 
